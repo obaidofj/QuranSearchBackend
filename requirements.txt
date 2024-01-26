@@ -1,0 +1,6 @@
+Flask
+SQLAlchemy
+gradio
+python-dotenv
+openai
+langchain

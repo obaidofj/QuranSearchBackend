@@ -1,0 +1,28 @@
+flask run -h localhost -p 4800
+
+
+**Test Natural Language Search Endpoint**
+```sh
+curl -X POST http://127.0.0.1:<PORT>/api/v1/search/natural-language -H "Content-Type: application/json" -d "{\"query\":\"Prophet Muhammad\"}"
+```
+
+**Test Two Word Search Endpoint**
+```sh
+curl -X POST http://127.0.0.1:<PORT>/api/v1/search/two-words -H "Content-Type: application/json" -d "{\"word1\":\"peace\",\"word2\":\"mercy\"}"
+```
+
+**Test One Word Search Endpoint**
+```sh
+curl -X POST http://127.0.0.1:<PORT>/api/v1/search/one-word -H "Content-Type: application/json" -d "{\"word\":\"forgiveness\"}"
+```
+
+**Test Word Root Search Endpoint**
+```sh
+curl -X POST http://127.0.0.1:<PORT>/api/v1/search/word-root -H "Content-Type: application/json" -d "{\"root\":\"علم\"}"
+```
+
+**Test Aya Search Endpoint**
+```sh
+curl -X POST http://127.0.0.1:<PORT>/api/v1/search/aya-search -H "Content-Type: application/json" -d "{\"text\":\"رحمن\"}"
+
+curl -X POST http://127.0.0.1:4800/api/v1/search/natural-language -H "Content-Type: application/json" -d "{\"query\":\"What is the significance of charity in Islam?\"}"

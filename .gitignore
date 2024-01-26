@@ -1,0 +1,77 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.Python
+pip-selfcheck.json
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Local configuration file (if any)
+*.ini
+*.conf
+
+# Environment variables
+.env
+.env.local
+
+# Compiled Python files
+*.pyc
+
+# IDE-specific files and directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.suo
+*.user
+*.bak
+*.cache
+
+# Package files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Other
+*.bak
+*.swp
+*~
+*.tmp
+*.sublime-workspace
+*.project
+*.pydevproject
+*.db
+*.sqlite
+*.h5
+*.pyre/
