@@ -6,7 +6,7 @@ two_word_bp = Blueprint('two_word', __name__)
 
 @two_word_bp.route('/two-words', methods=['POST'])
 def two_word_search():
-    word1 = request.json.get('wrdq1')
+    word1 = request.json.get('wrdq')
     word2 = request.json.get('wrdq2')
 
     wrd1='رقم_الكلمة_1'
@@ -17,7 +17,11 @@ def two_word_search():
 
     results = QuranSearch.query.filter((QuranSearch.الكلمة_1.ilike(f'%{word1}%') | QuranSearch.الكلمة_2.ilike(f'%{word2}%'))).all()
     
-    results_data = [{'word1': word.رقم_الكلمة_1, 'word2': word.رقم_الكلمة_2} for word in results]
+    # results_data = [{'word1': word.رقم_الكلمة_1, 'word2': word.رقم_الكلمة_2} for word in results]
+    results_data = []
+    for myword in results:
+     myword_dict = {key: getattr(myword, key) for key in myword.__dict__ if not key.startswith("_")}
+     results_data.append(myword_dict)
     
     return jsonify(results_data), 200
  
