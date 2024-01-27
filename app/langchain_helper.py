@@ -13,7 +13,8 @@ from langchain.chains import create_sql_query_chain
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
 def process_natural_language_query(query):
-    llm = OpenAI(model_name = 'gpt-4-1106-preview', temperature=0)
+    # llm = OpenAI(model_name = 'gpt-4-1106-preview', temperature=0)
+    llm = OpenAI(model_name = 'gpt-3.5-turbo-16k', temperature=0)
     db_uri = os.getenv('DATABASE_URL')
     db = SQLDatabase.from_uri(db_uri)
     
